@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Clock</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body id="body-container">
+    <main class="wrapper">
+        <div class="theme__switcher__container">
+            <a href="#" class="theme__switcher" id="theme-switcher"></a>
+        </div>
+        <section class="item__container">
+            <div class="back__arrow__container">
+                <a href="" class="back__arrow__btn" id="back__arrow-btn">
+                    <svg class="back_arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 39.9803C30.9413 39.9803 40 30.9064 40 19.9901C40 9.05437 30.9217 0 19.9804 0C9.05884 0 0 9.05437 0 19.9901C0 30.9064 9.07845 39.9803 20 39.9803ZM20 36.6487C10.7451 36.6487 3.35295 29.2406 3.35295 19.9901C3.35295 10.7398 10.7255 3.3317 19.9804 3.3317C29.2354 3.3317 36.6668 10.7398 36.6668 19.9901C36.6668 29.2406 29.255 36.6487 20 36.6487Z"/>
+                        <path d="M9.92163 19.9706C9.92163 20.4017 10.1177 20.7546 10.4706 21.1073L17.0982 27.7512C17.353 28.0059 17.7059 28.1626 18.1177 28.1626C18.9217 28.1626 19.5295 27.5354 19.5295 26.732C19.5295 26.3009 19.3726 25.948 19.0982 25.6933L16.6471 23.2632L14.2746 21.2837L18.4314 21.4209H28.6472C29.5099 21.4209 30.1177 20.8133 30.1177 19.9706C30.1177 19.1083 29.4903 18.5007 28.6472 18.5007H18.4314L14.2942 18.6574L16.6471 16.6781L19.0982 14.2479C19.353 13.9735 19.5295 13.6208 19.5295 13.1896C19.5295 12.3861 18.9217 11.7785 18.1177 11.7785C17.7059 11.7785 17.353 11.9157 17.0982 12.1705L10.4706 18.8339C10.0785 19.2259 9.92163 19.5394 9.92163 19.9706Z"/>
+                    </svg>    
+                </a>
+            </div>
+            <div class="watch__design__container">
+                <div class="watch__design__1">
+                    <p class="time" id="all-time-v1"></p>
+                </div>
+                <div class="watch__design__2">
+                    <div class="block__watch">
+                        <p class="watch__text" id="watch-text-v2"></p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="block__minutes">
+                        <p class="minutes__text" id="minutes-text-v2"></p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="watch__design__3">
+                    <div class="block__time">
+                        <div class="block__watch-2">
+                            <p class="watch__text-2" id="watch-text-v3"></p>
+                        </div>
+                        <div class="block__minutes-2">
+                            <p class="minutes__text-2" id="minutes-text-v3"></p>
+                        </div>
+                    </div>
+                    <div class="date__block">
+                        <p id="day-of-the-week"></p>
+                        <p id="month"></p>
+                        <p id="day-of-the-month"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="forward_arrow__container">
+                <a href="" class="forward_arrow__btn" id="forward_arrow-btn">
+                    <svg class="forward_arrow" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 0.0197304C9.05874 0.0197295 2.56677e-06 9.09356 1.61244e-06 20.0099C6.56403e-07 30.9456 9.07832 40 20.0196 40C30.9412 40 40 30.9456 40 20.0099C40 9.09357 30.9216 0.0197314 20 0.0197304ZM20 3.35128C29.2549 3.35128 36.647 10.7594 36.647 20.0099C36.647 29.2602 29.2745 36.6683 20.0196 36.6683C10.7646 36.6683 3.33319 29.2602 3.3332 20.0099C3.3332 10.7594 10.745 3.35128 20 3.35128Z"/>
+                        <path d="M30.0784 20.0294C30.0784 19.5983 29.8823 19.2454 29.5294 18.8927L22.9018 12.2488C22.647 11.9941 22.2941 11.8374 21.8823 11.8374C21.0783 11.8374 20.4705 12.4646 20.4705 13.268C20.4705 13.6991 20.6274 14.052 20.9018 14.3067L23.3529 16.7368L25.7254 18.7163L21.5686 18.5791L11.3528 18.5791C10.4901 18.5791 9.88225 19.1867 9.88225 20.0294C9.88225 20.8917 10.5097 21.4993 11.3528 21.4993L21.5686 21.4993L25.7058 21.3426L23.3529 23.3219L20.9018 25.7521C20.647 26.0265 20.4705 26.3792 20.4705 26.8104C20.4705 27.6139 21.0783 28.2215 21.8823 28.2215C22.2941 28.2215 22.647 28.0843 22.9018 27.8295L29.5294 21.1661C29.9215 20.7741 30.0784 20.4606 30.0784 20.0294Z">
+                    </svg>    
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js" integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
